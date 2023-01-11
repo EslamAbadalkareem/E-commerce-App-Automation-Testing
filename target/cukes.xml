@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="213.981">
+<testcase classname="currencies | customer can choose currency type that he would like to deal with" name="customer can deal with Euro" time="22.429">
+<system-out><![CDATA[When user select Euro currency from the dropdown list.......................passed
+Then Euro Symbol € is shown on the 4 products displayed in Home page........passed
+]]></system-out>
+</testcase>
+<testcase classname="Login | users should be able to login their accounts" name="user could login with valid email and password" time="17.103">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico\-account&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.5.0', revision: 'fe167b119a'&#10;System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [79ca0e98b56e5fe623d6ec51f6341137, findElement {using=class name, value=ico-account}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51373/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 79ca0e98b56e5fe623d6ec51f6341137" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user go to login page.................................................passed
+And user login with "valid" "test@example.com" and "P@ssw0rd"...............passed
+When user press on login button.............................................passed
+Then user login to the system successfully..................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".ico\-account"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [79ca0e98b56e5fe623d6ec51f6341137, findElement {using=class name, value=ico-account}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51373}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51373/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 79ca0e98b56e5fe623d6ec51f6341137
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.examples.pages.P02_login.valid_Assert(P02_login.java:35)
+	at org.examples.stepDefs.LoginStepDef.valid_Message(LoginStepDef.java:45)
+	at ✽.user login to the system successfully(file:///D:/Eslam%20Abdalkareem/Testing/INTLEJE/New%20folder/E-Commerce/src/main/resources/features/Login.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Login | users should be able to login their accounts" name="user could not login with invalid email and password" time="14.404">
+<system-out><![CDATA[Given user go to login page.................................................passed
+And user login with "invalid" "wrong@example.com" and "P@ssw0rd"............passed
+When user press on login button.............................................passed
+Then Step 4 user could not login to the system..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register | users should be able to register with new accounts" name="user could register with valid data successfully" time="17.02">
+<system-out><![CDATA[Given user go to register page..............................................passed
+And user select gender type.................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test@example.com" field...............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+When user clicks on register button.........................................passed
+Then success message should be displayed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | user could be able to search using product name or serial number" name="user could be able to search using product name" time="15.107">
+<failure message="cannot find title expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When user searching using product book name.................................passed
+Then user should be able to find items with the same product name...........failed
+
+StackTrace:
+java.lang.AssertionError: cannot find title expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:819)
+	at org.examples.stepDefs.SearchStepDef.check_elements_by_name(SearchStepDef.java:46)
+	at ✽.user should be able to find items with the same product name(file:///D:/Eslam%20Abdalkareem/Testing/INTLEJE/New%20folder/E-Commerce/src/main/resources/features/Search.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="Search | user could be able to search using product name or serial number" name="user could be able to search using product name 2" time="19.173">
+<system-out><![CDATA[When user searching using product laptop name...............................passed
+Then user should be able to find items with the same product name...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | user could be able to search using product name or serial number" name="user could be able to search using product name 3" time="17.292">
+<system-out><![CDATA[When user searching using product nike name.................................passed
+Then user should be able to find items with the same product name...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | user could be able to search using product name or serial number" name="user could be able to search using product sku" time="18.614">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.additional\-details&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.5.0', revision: 'fe167b119a'&#10;System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7b6917c8cf4c06798dd4aa5bbb604464, findElement {using=class name, value=additional-details}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51482}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51482/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 7b6917c8cf4c06798dd4aa5bbb604464" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user searching using product SCI_FAITH sku.............................passed
+Then the product sku shown in product page should contains the sku that you are using in search.failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".additional\-details"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b6917c8cf4c06798dd4aa5bbb604464, findElement {using=class name, value=additional-details}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51482}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51482/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b6917c8cf4c06798dd4aa5bbb604464
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.examples.pages.P03_homePage.sku_locator(P03_homePage.java:67)
+	at org.examples.stepDefs.SearchStepDef.check_element_by_sku(SearchStepDef.java:76)
+	at ✽.the product sku shown in product page should contains the sku that you are using in search(file:///D:/Eslam%20Abdalkareem/Testing/INTLEJE/New%20folder/E-Commerce/src/main/resources/features/Search.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="Search | user could be able to search using product name or serial number" name="user could be able to search using product sku 2" time="19.758">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.additional\-details&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.5.0', revision: 'fe167b119a'&#10;System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [8df02e56306d9023ad25e73292930b2a, findElement {using=class name, value=additional-details}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51499/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8df02e56306d9023ad25e73292930b2a" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user searching using product APPLE_CAM sku.............................passed
+Then the product sku shown in product page should contains the sku that you are using in search.failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".additional\-details"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8df02e56306d9023ad25e73292930b2a, findElement {using=class name, value=additional-details}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51499/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8df02e56306d9023ad25e73292930b2a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.examples.pages.P03_homePage.sku_locator(P03_homePage.java:67)
+	at org.examples.stepDefs.SearchStepDef.check_element_by_sku(SearchStepDef.java:76)
+	at ✽.the product sku shown in product page should contains the sku that you are using in search(file:///D:/Eslam%20Abdalkareem/Testing/INTLEJE/New%20folder/E-Commerce/src/main/resources/features/Search.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="Search | user could be able to search using product name or serial number" name="user could be able to search using product sku 3" time="20.056">
+<system-out><![CDATA[When user searching using product SF_PRO_11 sku.............................passed
+Then the product sku shown in product page should contains the sku that you are using in search.passed
+]]></system-out>
+</testcase>
+<testcase classname="Wishlist | Success message appears when clicking on wishlist button" name="success message appears in green background when user add item to wishlist" time="13.307">
+<system-out><![CDATA[When user click on wishlist icon............................................passed
+Then success message is displayed...........................................passed
+And background color is green...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Wishlist | Success message appears when clicking on wishlist button" name="items should be added to wishlist page and Qty should be bigger than 0" time="18.895">
+<system-out><![CDATA[When user click on wishlist icon............................................passed
+And user wait until this success message with green color to disappear......passed
+When click on Wishlist Tab..................................................passed
+Then Verify qty value bigger than 0.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
